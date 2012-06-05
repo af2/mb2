@@ -1,0 +1,41 @@
+{% extends 'boot.html.twig' %}
+
+{% block header %}
+<div class="row">
+  <div class="span6">
+    <h1>Artwork</h1>
+    <h2>Black &amp; White Photography</h2>
+  </div>
+  <div class="span6">
+    <p>Here is some of my photography shot on a black and white SLR.</p>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block container %}
+<div class="row" id="wall">
+   
+    {% for image in artwork %}
+      {% if image.kind == filter_artwork %} 
+        <div class="box span3"><img src="/img/artwork/{{ image.kind }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/></div>
+      {% endif %}
+    {% endfor %}
+  
+</div>
+{% endblock %}
+
+
+{# % block container %}
+      <div class="row">
+        <div class="span4 portfolio-class portfolio-class-visualisations">
+          <h3>Visualisations</h3>
+        </div>
+        <div class="span4 portfolio-class portfolio-class-collages">
+          <h3>Collages</h3>
+        </div>
+        <div class="span4 portfolio-class portfolio-class-websites">
+          <h3>Websites</h3>
+        </div>
+      </div>
+{% endblock % #}
