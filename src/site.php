@@ -72,7 +72,44 @@ $site['sociallinks'] = array(
         'Twitter'       => 'http://twitter.com/',
 );
 
+$site['artwork_kinds'] = array(
+    'blackandwhite' => array(
+        'heading'       => 'Black and White Photography',
+        'description'   => 'Here is some of my photography shot on a black and white SLR'
+    ),
+    'colour' => array(
+        'heading'       => 'Colour Photography',
+        'description'   => 'Here is some of my photography shot on a colour SLR'
+    ),
+    'collage'       => array(
+        'heading'       => 'Collages',
+        'description'   => 'Descrtiption goes here'
+    ),
+    'walls'         => array(
+        'heading'       => 'Walls',
+    ),
+    'perfomanceart' => array(
+        'heading'       => 'Performance Art',
+    ),
+    'soundart'      => array(
+        'heading'       => 'Sound Art',
+    ),
+    'installation'  => array(
+        'heading'       => 'Installations',
+    ),
+    'sculpture'     => array(
+        'heading'       => 'Sculptures',
+    ),
+    'memorabilia'   => array(
+        'heading'       => 'Memorabilia',
+    ), // check spelling
+
+);
+
 $site['artwork'] = array(
+    /**
+     *  Black and White Photography
+     */
     array(
         'name'   => 'dolls',
         'kind'   => 'blackandwhite',
@@ -116,6 +153,112 @@ $site['artwork'] = array(
     array(
         'name'   => 'libbirdsbrst',
         'kind'   => 'blackandwhite',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'lonsnow',
+        'kind'   => 'blackandwhite',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'spor',
+        'kind'   => 'blackandwhite',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'teeth1',
+        'kind'   => 'blackandwhite',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'teeth2',
+        'kind'   => 'blackandwhite',
+        'format' => 'png',
+    ),
+    /**
+     *  Collages
+     */
+    array(
+        'name'   => 'dreamphoto',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'ec2',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'ec4',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'ecg1',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'face23',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'wc2',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'rain',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'stop',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'traf',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'tree1',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'well',
+        'kind'   => 'collage',
+        'format' => 'png',
+    ),
+    /**
+     *  Colour Photos
+     */
+    array(
+        'name'   => 'mar1',
+        'kind'   => 'colour',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'wheel1',
+        'kind'   => 'colour',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'ty',
+        'kind'   => 'colour',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'ts2',
+        'kind'   => 'colour',
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'thew',
+        'kind'   => 'colour',
         'format' => 'png',
     ),
 );

@@ -10,6 +10,8 @@ require_once __DIR__.'/../src/site.php';
     $app['connection'] = new PDO('mysql:dbname='.DBNAME, DBUSER, DBPASS);
 //});
 
+    $app['twig']->addFunction('filefound', new Twig_Function_Function('file_exists'));
+
 $app->get('/', function() use($app, $site) { 
     return $app['twig']->render('boot.html.twig', $site); 
 });
@@ -23,6 +25,14 @@ $app->get('/artwork/{kind}/', function($kind) use($app, $site) {
     $site['filter_artwork'] = $kind;
 
     return $app['twig']->render('artwork_view.html.twig', $site); 
+});
+
+$app->get('/artwork/{kind}/{artwork}/', function($kind, $artwork) use($app, $site) {
+
+    $site['filter_artwork'] = $kind;
+    $site['select_artwork'] = $artwork;
+
+    return $app['twig']->render('artwork_item.html.twig', $site); 
 });
 
 $app->get('/contact/', function() use($app, $site) { 

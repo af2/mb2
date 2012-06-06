@@ -4,19 +4,27 @@
 <div class="row">
   <div class="span6">
     <h1>Artwork</h1>
-    <h2>Black &amp; White Photography</h2>
   </div>
   <div class="span6">
-    <p>Here is some of my photography shot on a black and white SLR.</p>
+    <p>.</p>
   </div>
 </div>
 {% endblock %}
 
 
 {% block container %}
+<div class="">
+  <ul class="artwork-list row">
+  {% for href,kind in artwork_kinds %}
+    <a href="/artwork/{{ href }}/" class="span3"><li>{{ kind.heading }}</li></a>
+  {% endfor %}
+  </ul>
+</div>
+
+
 <div class="row" id="wall">
   {% for image in artwork %}
-    <div class="box span3"><img src="/img/artwork/{{ image.kind }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/></div>
+    <div class="box span2"><img src="/img/artwork/{{ image.kind }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/></div>
   {% endfor %}
 </div>
 {% endblock %}

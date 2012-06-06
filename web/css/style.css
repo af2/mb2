@@ -77,8 +77,16 @@ header div > p{color:white;text-align:right;}
 
 #wall{padding-top:20px;}
 .box{background:#000; margin-bottom:10px;}
-.box > img{ width:200px; margin:10px; }
+.box.span3 img{ width:200px; margin:10px; }
+.box.span2 img{ width:120px; margin:10px; }
+.box.span1 img{ width:40px; margin:10px; }
 
+.displayart{ background:#000; margin-bottom:10px; text-align:center;}
+.displayart > img{ max-width:920px; margin:10px; }
+
+.artwork-list{ list-style-type: none; margin-top:10px; text-align:center;}
+.artwork-list a{ height:50px; background:rgba(200,0,29,0.3); margin-top:10px; border-radius:5px; /*position:relative;*/ }
+.artwork-list a li{ /*position: absolute; bottom:10px;*/ width:100%; padding-top:14px; font-size:0.9em; }
 
 /** Imported from CodeIgniter, needs revision **/
 
