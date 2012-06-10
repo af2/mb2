@@ -1,14 +1,20 @@
 {% extends 'boot.html.twig' %}
 
+{% if uri[2] == 'gallery' %}
+  {% set selection = artwork_galleries %}
+{% else %}
+  {% set selection = artwork_kinds %}
+{% endif %}
+
 {% block header %}
 <div class="row">
   <div class="span8">
     
-    {% for artwork_id,artwork_page in artwork_kinds %}
+    {% for artwork_id,artwork_page in selection %}
       {% if artwork_id == filter_artwork %}
       <h1>'{{ select_artwork }}'</h1>
       <h3><span style="font-weight:normal;color:#aaa;">[ {{ "now"|date('Y') }} ]</span></h3>
-      <h4><a href="/artwork/">Artwork</a> :: <a href="/artwork/{{ filter_artwork }}">{{ artwork_page.heading }}</a><br /> </h4>
+      <h4 style="color:#fff;"><a href="/artwork/">Artwork</a> :: <a href="/artwork/gallery/{{ filter_artwork }}">Gallery : {{ artwork_page.heading }}</a><br /> </h4>
         
       
   </div>
@@ -25,13 +31,25 @@
 <div class="row" id="wall">
    
     {% for image in artwork %}
-      {% if image.kind == filter_artwork %} 
-        {% if image.name == select_artwork %}
-          <div class="displayart span12">
+      {% if selection == artwork_kinds %}
+        {% if image.kind == filter_artwork %} 
+          {% if image.name == select_artwork %}
+            <div class="displayart span12">
+              
+                <img src="/img/artwork/{{ image.kind }}/page/p_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/>
             
-              <img src="/img/artwork/{{ image.kind }}/page/p_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/>
-          
-          </div>
+            </div>
+          {% endif %}
+        {% endif %}
+      {% else %}
+        {% if image.gallery == filter_artwork %} 
+          {% if image.name == select_artwork %}
+            <div class="displayart span12">
+              
+                <img src="/img/artwork/z_gallery/{{ image.gallery }}/page/p_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/>
+            
+            </div>
+          {% endif %}
         {% endif %}
       {% endif %}
     {% endfor %}

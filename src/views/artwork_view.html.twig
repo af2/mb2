@@ -1,13 +1,23 @@
 {% extends 'boot.html.twig' %}
 
+{% if uri[2] == 'gallery' %}
+  {% set selection = artwork_galleries %}
+{% else %}
+  {% set selection = artwork_kinds %}
+{% endif %}
+
+
 {% block header %}
 <div class="row">
   <div class="span6">
     <h1><a href="/artwork/">Artwork</a></h1>
-    {% for artwork_id,artwork_page in artwork_kinds %}
+    {% for artwork_id,artwork_page in selection %}
       {% if artwork_id == filter_artwork %}
-        <h2>{{ artwork_page.heading }}</h2>
-      
+        {% if selection == artwork_galleries %}
+          <h2>"{{ artwork_page.heading }}"</h2>
+        {% else %}
+          <h2>{{ artwork_page.heading }}</h2>
+        {% endif %}
   </div>
   <div class="span6">
     <p>{{ artwork_page.description }}.</p>
@@ -20,15 +30,25 @@
 
 {% block container %}
 <div class="row" id="wall">
-   
     {% for image in artwork %}
-      {% if image.kind == filter_artwork %} 
-        <div class="box span3">
-          <a href="/artwork/{{ image.kind }}/{{ image.name }}/">
-            <img src="/img/artwork/{{ image.kind }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/>
-          </a>
-        </div>
+      {% if selection == artwork_kinds %}
+        {% if image.kind == filter_artwork %} 
+          <div class="box span3">
+            <a href="/artwork/{{ image.kind }}/{{ image.name }}/">
+              <img src="/img/artwork/{{ image.kind }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/>
+            </a>
+          </div>
+        {% endif %}
+      {% else %}
+        {% if image.gallery == filter_artwork %} 
+          <div class="box span3">
+            <a href="/artwork/gallery/{{ image.gallery }}/{{ image.name }}/">
+              <img src="/img/artwork/z_gallery/{{ image.gallery }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/>
+            </a>
+          </div>
+        {% endif %}
       {% endif %}
+
     {% endfor %}
   
 </div>

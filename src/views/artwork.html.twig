@@ -13,7 +13,7 @@
 
 
 {% block container %}
-<div class="">
+<div class="link-block">
   <ul class="artwork-list row">
   {% for href,kind in artwork_kinds %}
     <a href="/artwork/{{ href }}/" class="span3"><li>{{ kind.heading }}</li></a>
@@ -21,10 +21,21 @@
   </ul>
 </div>
 
+<div class="link-block">
+  <ul class="artwork-list gallery-list row">
+  {% for href,gallery in artwork_galleries %}
+    <a href="/artwork/gallery/{{ href }}/" class="span3"><li>{{ gallery.heading }}</li></a>
+  {% endfor %}
+  </ul>
+</div>
 
 <div class="row" id="wall">
   {% for image in artwork %}
-    <div class="box span2"><img src="/img/artwork/{{ image.kind }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/></div>
+    {% if not (image.gallery|length > 0) %}
+      <div class="box span2"><img src="/img/artwork/{{ image.kind }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/></div>
+    {% else %}
+      <div class="box span2"><img src="/img/artwork/z_gallery/{{ image.gallery }}/thumbnail/t_{{ image.name }}.{{ image.format }}" alt="{{ image.name }}"/></div>
+    {% endif %}
   {% endfor %}
 </div>
 {% endblock %}

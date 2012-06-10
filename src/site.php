@@ -72,6 +72,30 @@ $site['sociallinks'] = array(
         'Twitter'       => 'http://twitter.com/',
 );
 
+$site['filter_by'] = array(
+
+    0 => 'none',
+    1 => 'kind',
+    2 => 'gallery'
+
+);
+
+$site['artwork_galleries'] = array(
+    'lennon' => array(
+        'heading'       => "Lennon's On Sale Again",
+        'description'   => "Lennon's On Sale Again",
+    ),
+    'teeth' => array(
+        'heading'       => "Teeth",
+        'description'   => "Teeth",
+    ),
+    'maybebaby' => array(
+        'heading'       => "Maybebaby",
+        'description'   => "Maybebaby",
+    ),
+
+);
+
 $site['artwork_kinds'] = array(
     'blackandwhite' => array(
         'heading'       => 'Black and White Photography',
@@ -83,7 +107,11 @@ $site['artwork_kinds'] = array(
     ),
     'collage'       => array(
         'heading'       => 'Collages',
-        'description'   => 'Descrtiption goes here'
+        'description'   => 'Description goes here'
+    ),
+    'drawing'       => array(
+        'heading'       => 'Drawings',
+        'description'   => 'Description goes here'
     ),
     'walls'         => array(
         'heading'       => 'Walls',
@@ -113,66 +141,79 @@ $site['artwork'] = array(
     array(
         'name'   => 'dolls',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'doit',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'bigbensnow',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'ct2',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'glass',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'dolly',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'glass72',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'head72',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'libbirdsbrst',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'lonsnow',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'spor',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'teeth1',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'teeth2',
         'kind'   => 'blackandwhite',
+        'gallery'=> "",
         'format' => 'png',
     ),
     /**
@@ -181,56 +222,67 @@ $site['artwork'] = array(
     array(
         'name'   => 'dreamphoto',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'ec2',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'ec4',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'ecg1',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'face23',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'wc2',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'rain',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'stop',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'traf',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'tree1',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'well',
         'kind'   => 'collage',
+        'gallery'=> "",
         'format' => 'png',
     ),
     /**
@@ -239,29 +291,239 @@ $site['artwork'] = array(
     array(
         'name'   => 'mar1',
         'kind'   => 'colour',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'wheel1',
         'kind'   => 'colour',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'ty',
         'kind'   => 'colour',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'ts2',
         'kind'   => 'colour',
+        'gallery'=> "",
         'format' => 'png',
     ),
     array(
         'name'   => 'thew',
         'kind'   => 'colour',
+        'gallery'=> "",
         'format' => 'png',
     ),
+    /**
+     *  Drawing
+     */
+    array(
+        'name'   => 'waaert',
+        'kind'   => 'drawing',
+        'gallery'=> "",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'dance',
+        'kind'   => 'drawing',
+        'gallery'=> "",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'sunset',
+        'kind'   => 'drawing',
+        'gallery'=> "",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'sae',
+        'kind'   => 'drawing',
+        'gallery'=> "",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'face',
+        'kind'   => 'drawing',
+        'gallery'=> "",
+        'format' => 'png',
+    ),
+    /**
+     * GALLERY : Lennon
+     */
+    array(
+        'name'   => 'bwinim',
+        'kind'   => 'collage',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'shlom',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'myb',
+        'kind'   => 'composition',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'mother',
+        'kind'   => 'composition',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'last',
+        'kind'   => 'collage',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'istel',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'isr',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'fse4',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'losa1',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'losa2',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'losa3',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'losa4',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'losa5',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'losa6',
+        'kind'   => 'colour',
+        'gallery'=> "lennon",
+        'format' => 'png',
+    ),
+    /**
+     * GALLERY : teeth
+     */
+    array(
+        'name'   => 'teeth11',
+        'kind'   => 'composition',
+        'gallery'=> "teeth",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'stack',
+        'kind'   => 'blackandwhite',
+        'gallery'=> "teeth",
+        'format' => 'png',
+    ),
+    /**
+     * GALLERY: Maybebaby 
+     * instdio,attr12,law,maybebaby2,playgooodgood,syud,thone
+     */
+    array(
+        'name'   => 'instdio',
+        'kind'   => "",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'attr12',
+        'kind'   => "",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'law',
+        'kind'   => "",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'mbbb1',
+        'kind'   => "collage",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'mbbb2',
+        'kind'   => "collage",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'mbbb3',
+        'kind'   => "collage",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'mbbb4',
+        'kind'   => "collage",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'playgooodgood',
+        'kind'   => "",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'syud',
+        'kind'   => "",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    array(
+        'name'   => 'thone',
+        'kind'   => "",
+        'gallery'=> "maybebaby",
+        'format' => 'png',
+    ),
+    
+
+
+    
 );
+
+shuffle($site['artwork']);
 
 $site['portfolio'] = array(
     'Collages'    => array(
