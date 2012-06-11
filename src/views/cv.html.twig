@@ -1,0 +1,32 @@
+{% extends 'boot.html.twig' %}
+
+{% block header %}
+<div class="row">
+  <div class="span6">
+    <h1>Curriculum Vitae</h1>
+  </div>
+  <div class="span6">
+    <p>.</p>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block container %}
+
+<div style="background:white;border-radius:5px;margin-top:15px;margin-bottom:15px;padding:10px;">
+  
+    <h3>{{ cv.qualifications.title }}</h3>
+    </br>
+    {% for q in cv.qualifications.content %}
+      <h6><span>{{ q.year.from }}{% if q.year.to != q.year.from %} to {{ q.year.to }}{% endif %}</span></h6> 
+      <h4>{{ q.school }} </h4>
+      <h5>{{ q.qualification.level }} in {{ q.qualification.subject }} </h5>
+     
+      
+      <br />
+    {% endfor %}
+  
+</div>
+
+{% endblock %}

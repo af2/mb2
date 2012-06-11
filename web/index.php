@@ -74,6 +74,10 @@ $app->get('/contact/', function() use($app, $site) {
     return $app['twig']->render('contact.html.twig', $site); 
 });
 
+$app->get('/cv/', function() use($app, $site) { 
+    return $app['twig']->render('cv.html.twig', $site); 
+});
+
 $app->get('/about/', function() use($app, $site) { 
     return $app['twig']->render('foundation.html.twig', $site); 
 });
