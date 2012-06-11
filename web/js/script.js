@@ -8,6 +8,12 @@ $('.carousel').carousel({
 })
 
 /**
+ *	Dropdown for navbar
+ */
+$('.dropdown-toggle').dropdown();
+
+
+/**
  *	jQuery Masonry: Preload images, constrain to 
  */
  
@@ -22,7 +28,7 @@ $container.imagesLoaded( function(){
 /*
 $('#wall').masonry({
   itemSelector: '.box',
-  columnWidth: 10
+  whpe
   isAnimated: true
 });
 */

@@ -72,14 +72,17 @@ $site['carousel'] = array(
 );
 
 $site['navlinks'] = array(
-        'The Works'     => 'artwork',
-        //'Workshop'      => 'workshop',
-        'Projects'      => 'projects',
-        'Blog'          => 'blog',
-        'Articles'      => 'articles',
-        //'Notes'         => 'notes',
-        'About'         => 'about',
-        'Contact'       => 'contact',
+        'artwork'   => 'The Works',
+        'projects'  => 'Projects',
+        'blog'      => 'Blog',
+        'articles'  => 'Articles',
+        //'about'     => 'About',
+        'about'     => array(
+            '_index'    => 'About',
+            'cv'        => 'CV',
+            'more'      => 'More',
+        ),
+        'contact'   => 'Contact',
 );
 
 $site['sociallinks'] = array(

@@ -14,6 +14,8 @@ use Symfony\Component\HttpFoundation\Response;
 
     $app['twig']->addFunction('filefound', new Twig_Function_Function('file_exists'));
 
+    $app['twig']->addFunction('is_array', new Twig_Function_Function('is_array'));
+
 
 
 $app->get('/', function() use($app, $site) { 
